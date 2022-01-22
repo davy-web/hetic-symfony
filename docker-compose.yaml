@@ -1,44 +1,13 @@
-version: '3.8'
-
+version: '3.7'
 services:
-    db:
-        image: mysql
-        container_name: db_docker_symfony
-        restart: always
-        volumes:
-            - ./database:/var/lib/mysql
-        networks:
-            - dev
-        environment:
-            MYSQL_ROOT_PASSWORD: davy
-
-    phpmyadmin:
-        image: phpmyadmin
-        container_name: phpmyadmin_docker_symfony
-        restart: always
-        networks:
-            - dev
-        depends_on:
-            - db
-        environment:
-            PMA_HOST: db
-        ports:
-            - 8888:80
-
-    www:
-        build: .
-        container_name: www_docker_symfony
-        restart: always
-        volumes:
-            - ./vhosts:/etc/apache2/sites-enabled
-            - ./:/var/www
-        networks:
-            - dev
-        ports:
-            - 5555:80
-
-networks:
-    dev:
- 
-volumes:
     database:
+        image: 'mysql:latest'
+        environment:
+            MYSQL_ROOT_PASSWORD: password
+            MYSQL_DATABASE: main
+        ports:
+            # To allow the host machine to access the ports below, modify the lines below.
+            # For example, to allow the host to connect to port 3306 on the container, you would change
+            # "3306" to "3306:3306". Where the first port is exposed to the host and the second is the container port.
+            # See https://docs.docker.com/compose/compose-file/#ports for more information.
+            - '3306'
