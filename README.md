@@ -15,6 +15,7 @@ symfony serve -d
 symfony new hetic-symfony-leboncoin
 composer require annotations
 composer require templates
+composer require symfony/asset
 composer require symfony/maker-bundle --dev
 composer require orm
 composer require security
