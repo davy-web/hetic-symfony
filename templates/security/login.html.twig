@@ -1,0 +1,67 @@
+{% extends 'base-theme.html.twig' %}
+
+{% block title %}Log in!{% endblock %}
+
+{% block body %}
+
+            <!-- ======= Connexion Section ======= -->
+            <section id="connexion" class="contact margin_top_nav_davy">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Connexion</h2>
+                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col-lg-2 mt-lg-0">
+                    </div>
+                    <div class="col-lg-8 mt-lg-0">
+                        
+                        <form method="post">
+                            {% if error %}
+                                <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                            {% endif %}
+
+                            {% if app.user %}
+                                <div class="mb-3">
+                                    You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+                                </div>
+                            {% endif %}
+
+                            <div class="form_group_davy mt-3">
+                                <input type="email" value="{{ last_username }}" name="email" id="inputEmail" placeholder="Votre adresse email" class="input_davy" autocomplete="email" required autofocus>
+                            </div>
+                            <div class="form_group_davy mt-3">
+                                <input type="password" name="password" id="inputPassword" placeholder="Votre mot de passe" class="input_davy" autocomplete="current-password" required>
+                            </div>
+
+                            <input type="hidden" name="_csrf_token"
+                                value="{{ csrf_token('authenticate') }}"
+                            >
+
+                            {#
+                                Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+                                See https://symfony.com/doc/current/security/remember_me.html
+
+                                <div class="checkbox mb-3">
+                                    <label>
+                                        <input type="checkbox" name="_remember_me"> Remember me
+                                    </label>
+                                </div>
+                            #}
+
+                            <div class="text-center mt-3">
+                                <button class="bouton_davy" type="submit">
+                                    Se connecter
+                                </button>
+                            </div>
+                        </form>
+                        
+                    </div>
+                    <div class="col-lg-2 mt-lg-0">
+                    </div>
+                </div>
+            </div>
+            </section><!-- End Connexion Section -->
+
+{% endblock %}

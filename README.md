@@ -11,6 +11,9 @@ Docker-compose
 docker-compose up -d
 symfony serve -d
 
+# Terminal - Arrêter site
+symfony serve:stop
+
 # Terminal - Création symfony
 symfony new hetic-symfony-leboncoin
 composer require annotations
@@ -29,6 +32,9 @@ symfony console make:entity
 symfony console make:migration
 symfony console doctrine:migrations:migrate
 
+symfony console make:auth
+
 # Dossiers
-project/src/Controller/
+project/src/
 project/templates/
+public/
