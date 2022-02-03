@@ -40,6 +40,8 @@ symfony console doctrine:fixtures:load
 mysql -p
 use main
 
+symfony console make:auth
+
 # Dossiers
 project/src/
 project/templates/
