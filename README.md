@@ -10,6 +10,8 @@ Docker-compose
 # Terminal - Ouvrir site
 docker-compose up -d
 symfony serve -d
+symfony console doctrine:migrations:migrate
+symfony console doctrine:fixtures:load
 
 # Terminal - Arrêter site
 symfony serve:stop
@@ -22,10 +24,12 @@ composer require symfony/asset
 composer require symfony/maker-bundle --dev
 composer require symfony/orm-pack
 composer require orm-fixtures --dev
+composer require fakerphp/faker --dev
 composer require security
 composer require profiler --dev
 composer require debug
 symfony console make:docker:database
+docker-compose run php php bin/console make:docker:database
 
 # Terminal - Création base de donnée
 symfony console make:user
@@ -36,11 +40,17 @@ symfony console make:migration
 symfony console doctrine:migrations:migrate
 symfony console doctrine:fixtures:load
 
+docker-compose run php php bin/console make:user
+docker-compose run php php bin/console make:auth
+
+docker-compose run php php bin/console make:entity
+docker-compose run php php bin/console make:migration
+docker-compose run php php bin/console doctrine:migrations:migrate
+docker-compose run php php bin/console doctrine:fixtures:load
+
 # Shell mysql
 mysql -p
 use main
-
-symfony console make:auth
 
 # Dossiers
 project/src/

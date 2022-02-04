@@ -28,6 +28,9 @@ class Annonce
     #[ORM\Column(type: 'datetime', nullable: true)]
     private $date_publication;
 
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    private $auteur;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -89,6 +92,18 @@ class Annonce
     public function setDatePublication(?\DateTimeInterface $date_publication): self
     {
         $this->date_publication = $date_publication;
+
+        return $this;
+    }
+
+    public function getAuteur(): ?string
+    {
+        return $this->auteur;
+    }
+
+    public function setAuteur(?string $auteur): self
+    {
+        $this->auteur = $auteur;
 
         return $this;
     }
