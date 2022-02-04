@@ -1,6 +1,6 @@
 {% extends 'base-theme.html.twig' %}
 
-{% block title %}Log in!{% endblock %}
+{% block title %}Connexion{% endblock %}
 
 {% block body %}
 
@@ -24,7 +24,7 @@
 
                             {% if app.user %}
                                 <div class="mb-3">
-                                    You are logged in as {{ app.user.name }}, <a href="{{ path('app_logout') }}">Logout</a>
+                                    Vous êtes connecté en tant que {{ app.user.name }}, <a href="{{ path('app_logout') }}">Se déconnecter</a>
                                 </div>
                             {% endif %}
 
@@ -53,7 +53,8 @@
                             <div class="text-center mt-3">
                                 <button class="bouton_davy" type="submit">
                                     Se connecter
-                                </button>
+                                </button><br><br>
+                                <a href="/inscription">S'inscrire</a>
                             </div>
                         </form>
                         

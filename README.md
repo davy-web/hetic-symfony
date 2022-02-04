@@ -16,6 +16,10 @@ symfony console doctrine:fixtures:load
 # Terminal - Arrêter site
 symfony serve:stop
 
+# Connexion
+Email : chendavyweb@gmail.com
+Password : password
+
 
 
 

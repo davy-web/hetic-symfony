@@ -1,0 +1,48 @@
+{% extends 'base-theme.html.twig' %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block body %}
+
+            <!-- ======= Inscription Section ======= -->
+            <section id="inscription" class="contact margin_top_nav_davy">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Inscription</h2>
+                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col-lg-2 mt-lg-0">
+                    </div>
+                    <div class="col-lg-8 mt-lg-0">
+                        
+                        <form method="post">
+
+                            <div class="form_group_davy mt-3">
+                                <input type="text" value="" name="name" id="inputName" placeholder="Votre nom" class="input_davy" required>
+                            </div>
+
+                            <div class="form_group_davy mt-3">
+                                <input type="email" value="" name="email" id="inputEmail" placeholder="Votre adresse email" class="input_davy" autocomplete="email" required>
+                            </div>
+                            <div class="form_group_davy mt-3">
+                                <input type="password" name="password" id="inputPassword" placeholder="Votre mot de passe" class="input_davy" autocomplete="current-password" required>
+                            </div>
+
+                            <div class="text-center mt-3">
+                                <button class="bouton_davy" type="submit">
+                                    S'incrire
+                                </button><br><br>
+                                <a href="/login">Se connecter</a>
+                            </div>
+                        </form>
+                        
+                    </div>
+                    <div class="col-lg-2 mt-lg-0">
+                    </div>
+                </div>
+            </div>
+            </section><!-- End Inscription Section -->
+
+{% endblock %}
