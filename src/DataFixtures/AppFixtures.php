@@ -4,7 +4,6 @@ namespace App\DataFixtures;
 
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
-use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Faker\Factory;
 use App\Entity\User;
 use App\Entity\Role;
@@ -13,12 +12,6 @@ use App\Entity\Tag;
 
 class AppFixtures extends Fixture
 {
-    // private $encoder;
-
-    // public function __construct(UserPasswordEncoderInterface $encoder)
-    // {
-    //     $this->encoder = $encoder;
-    // }
 
     public function load(ObjectManager $manager): void
     {
@@ -26,13 +19,12 @@ class AppFixtures extends Fixture
         $date_now = new \DateTime('@'.strtotime('now'));
 
         // User
-        // $user = new User();
-        // $user->setEmail('chendavyweb@gmail.com');
-        // $user->setName('Davy');
-        // $password = $encoder->encodePassword($user, 'password');
-        // $user->setPassword($password);
+        $user = new User();
+        $user->setEmail('chendavyweb@gmail.com');
+        $user->setName('Davy');
+        $user->setPassword('$2y$13$pSKsOx9qT6R08USOP2xknOLIcAVk6eMAxc9TPN/KHP17qf42fYztS'); // password
         
-        // $manager->persist($user);
+        $manager->persist($user);
         
         // Role
         $role = new Role();

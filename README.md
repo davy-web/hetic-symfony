@@ -53,6 +53,9 @@ docker-compose run php php bin/console make:migration
 docker-compose run php php bin/console doctrine:migrations:migrate
 docker-compose run php php bin/console doctrine:fixtures:load
 
+# Terminal - Password
+symfony console security:hash-password
+
 # Shell mysql
 mysql -p
 use main
