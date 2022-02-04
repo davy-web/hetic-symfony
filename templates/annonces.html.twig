@@ -44,9 +44,9 @@
 
                 {% for annonce in annonces %}
                 <div class="col-lg-4 col-md-6 portfolio-item filter-{{ random(['vetement', 'livre', 'tech']) }}">
-                <a href="./annonce?id={{ annonce.id }}">
+                <a href="./annonce/{{ annonce.id }}">
                     <div class="portfolio-wrap">
-                        <img src="img/annonces/{{ annonce.photoPrincipale }}" class="img-fluid" alt="">
+                        <img src="/img/annonces/{{ annonce.photoPrincipale }}" class="img-fluid" alt="">
                         <div class="portfolio-info">
                             <h4>{{ annonce.auteur }}</h4>
                             <p>{{ annonce.datePublication|date('d-m-Y') }}</p>

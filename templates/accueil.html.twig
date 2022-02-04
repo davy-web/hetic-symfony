@@ -15,7 +15,7 @@
                 <div><a href="#nouveaux" class="btn-get-started scrollto">Voir</a></div>
                 </div>
                 <div class="col-lg-6 order-1 order-lg-2 hero-img">
-                <img src="img/hero-img.png" class="img-fluid" alt="">
+                <img src="/img/hero-img.png" class="img-fluid" alt="">
                 </div>
             </div>
             </div>
@@ -48,9 +48,9 @@
 
                 {% for annonce in annonces %}
                 <div class="col-lg-4 col-md-6 portfolio-item filter-{{ random(['vetement', 'livre', 'tech']) }}">
-                <a href="./annonce?id={{ annonce.id }}">
+                <a href="./annonce/{{ annonce.id }}">
                     <div class="portfolio-wrap">
-                        <img src="img/annonces/{{ annonce.photoPrincipale }}" class="img-fluid" alt="">
+                        <img src="/img/annonces/{{ annonce.photoPrincipale }}" class="img-fluid" alt="">
                         <div class="portfolio-info">
                             <h4>{{ annonce.auteur }}</h4>
                             <p>{{ annonce.datePublication|date('d-m-Y') }}</p>
@@ -78,7 +78,7 @@
 
                     <div class="swiper-slide">
                     <div class="testimonial-item">
-                        <img src="img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                        <img src="/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
                         <h3>Saul Goodman</h3>
                         <h4>Ceo &amp; Founder</h4>
                         <p>
@@ -91,7 +91,7 @@
 
                     <div class="swiper-slide">
                     <div class="testimonial-item">
-                        <img src="img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                        <img src="/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
                         <h3>Sara Wilsson</h3>
                         <h4>Designer</h4>
                         <p>
@@ -104,7 +104,7 @@
 
                     <div class="swiper-slide">
                     <div class="testimonial-item">
-                        <img src="img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                        <img src="/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
                         <h3>Jena Karlis</h3>
                         <h4>Store Owner</h4>
                         <p>
@@ -117,7 +117,7 @@
 
                     <div class="swiper-slide">
                     <div class="testimonial-item">
-                        <img src="img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                        <img src="/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
                         <h3>Matt Brandon</h3>
                         <h4>Freelancer</h4>
                         <p>
@@ -130,7 +130,7 @@
 
                     <div class="swiper-slide">
                     <div class="testimonial-item">
-                        <img src="img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                        <img src="/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
                         <h3>John Larson</h3>
                         <h4>Entrepreneur</h4>
                         <p>
@@ -167,7 +167,7 @@
                 <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                     <div class="member">
                     <div class="member-img">
-                        <img src="img/team/team.jpg" class="img-fluid" alt="">
+                        <img src="/img/team/team.jpg" class="img-fluid" alt="">
                         <div class="social">
                         <a href=""><i class="bi bi-twitter"></i></a>
                         <a href=""><i class="bi bi-facebook"></i></a>
@@ -185,7 +185,7 @@
                 <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                     <div class="member">
                     <div class="member-img">
-                        <img src="img/team/team.jpg" class="img-fluid" alt="">
+                        <img src="/img/team/team.jpg" class="img-fluid" alt="">
                         <div class="social">
                         <a href=""><i class="bi bi-twitter"></i></a>
                         <a href=""><i class="bi bi-facebook"></i></a>

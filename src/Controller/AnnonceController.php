@@ -10,14 +10,16 @@ use App\Repository\AnnonceRepository;
 class AnnonceController extends AbstractController
 {
     /**
-     * @Route("/annonce")
+     * @Route("/annonce/{id_annonce}")
      */
-    public function annonce(): Response
+    public function annonce($id_annonce, AnnonceRepository $annonceRepository): Response
     {
         $titre = "Leboncoin du pauvre - Annonce";
 
         return $this->render('annonce.html.twig', [
             'titre' => $titre,
+            'annonces' => $annonceRepository->annonceById($id_annonce),
+            
         ]);
     }
 }

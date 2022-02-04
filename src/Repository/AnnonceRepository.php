@@ -32,6 +32,21 @@ class AnnonceRepository extends ServiceEntityRepository
         ;
     }
 
+    /**
+     * @return Annonce[] Returns an array of Annonce objects
+     */
+    public function annonceById($id_annonce)
+    {
+        return $this->createQueryBuilder('a')
+        ->andWhere('a.id = :id_annonce')
+        ->setParameter('id_annonce', $id_annonce)
+        ->orderBy('a.id', 'ASC')
+        ->setMaxResults(1)
+        ->getQuery()
+        ->getResult()
+        ;
+    }
+
     // /**
     //  * @return Annonce[] Returns an array of Annonce objects
     //  */
