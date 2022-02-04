@@ -10,6 +10,7 @@ Docker-compose
 # Terminal - Ouvrir site
 docker-compose up -d
 symfony serve -d
+composer require symfony/runtime
 symfony console doctrine:migrations:migrate
 symfony console doctrine:fixtures:load
 
