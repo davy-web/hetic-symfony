@@ -53,7 +53,7 @@
                         <img src="img/portfolio/portfolio-{{ random(['1', '2', '3', '4', '5', '6', '7', '8', '9']) }}.jpg" class="img-fluid" alt="">
                         <div class="portfolio-info">
                             <h4>{{ annonce.auteur }}</h4>
-                            <p></p>
+                            <p>{{ annonce.datePublication|date('d-m-Y') }}</p>
                         </div>
                     </div><br>
                     <div class="text-center">

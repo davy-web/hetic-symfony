@@ -16,6 +16,11 @@ symfony console doctrine:fixtures:load
 # Terminal - Arrêter site
 symfony serve:stop
 
+
+
+
+
+
 # Terminal - Création symfony
 symfony new hetic-symfony-leboncoin
 composer require annotations
@@ -28,10 +33,9 @@ composer require fakerphp/faker --dev
 composer require security
 composer require profiler --dev
 composer require debug
-symfony console make:docker:database
-docker-compose run php php bin/console make:docker:database
 
 # Terminal - Création base de donnée
+symfony console make:docker:database
 symfony console make:user
 symfony console make:auth
 
@@ -40,6 +44,7 @@ symfony console make:migration
 symfony console doctrine:migrations:migrate
 symfony console doctrine:fixtures:load
 
+docker-compose run php php bin/console make:docker:database
 docker-compose run php php bin/console make:user
 docker-compose run php php bin/console make:auth
 
