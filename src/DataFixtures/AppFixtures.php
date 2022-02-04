@@ -42,11 +42,13 @@ class AppFixtures extends Fixture
         $manager->persist($role);
 
         // Annonce
-        for ($i = 0; $i < 10; $i++) {    
+        for ($i = 0; $i < 30; $i++) {
+            $image_file = "annonce-" . $faker->randomDigitNot(0) . ".jpg";
+
             $annonce = new Annonce();
             $annonce->setTitre($faker->words(2, true));
             $annonce->setDescription($faker->text());
-            $annonce->setPhotoPrincipale('photo.jpg');
+            $annonce->setPhotoPrincipale($image_file);
             $annonce->setPrix($faker->randomFloat(2, 20, 60));
             $annonce->setDatePublication($faker->dateTimeBetween('-3 month', 'now'));
             $annonce->setAuteur($faker->name());
@@ -58,7 +60,7 @@ class AppFixtures extends Fixture
         for ($i = 0; $i < 5; $i++) {
             $tag = new Tag();
             $tag->setNom($faker->word());
-            $tag->setAnnonceId($faker->unique()->randomDigit(2, 5, 10));
+            $tag->setAnnonceId($faker->unique()->randomDigitNot(0));
 
             $manager->persist($tag);
         }

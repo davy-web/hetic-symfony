@@ -1,0 +1,70 @@
+{% extends 'base-theme.html.twig' %}
+
+{% block title %}{{ titre }}{% endblock %}
+
+{% block body %}
+
+        <main id="main">
+
+            <!-- ======= Breadcrumbs ======= -->
+            <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
+
+                <div class="d-flex justify-content-between align-items-center">
+                <ol>
+                    <li><a href=".">Accueil</a></li>
+                    <li>Les annonces</li>
+                </ol>
+                </div>
+
+            </div>
+            </section><!-- End Breadcrumbs -->
+
+            <!-- ======= Annonce Section ======= -->
+            <section id="produits" class="portfolio">
+            <div class="container">
+
+                <div class="section-title">
+                <h2>Les annonces</h2>
+                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                </div>
+
+                <div class="row">
+                <div class="col-lg-12 d-flex justify-content-center">
+                    <ul id="portfolio-flters">
+                    <li data-filter="*" class="filter-active">Tout</li>
+                    <li data-filter=".filter-vetement">Vêtement</li>
+                    <li data-filter=".filter-livre">Livre</li>
+                    <li data-filter=".filter-tech">Tech</li>
+                    </ul>
+                </div>
+                </div>
+
+                <div class="row portfolio-container">
+
+                {% for annonce in annonces %}
+                <div class="col-lg-4 col-md-6 portfolio-item filter-{{ random(['vetement', 'livre', 'tech']) }}">
+                <a href="./annonce?id={{ annonce.id }}">
+                    <div class="portfolio-wrap">
+                        <img src="img/annonces/{{ annonce.photoPrincipale }}" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>{{ annonce.auteur }}</h4>
+                            <p>{{ annonce.datePublication|date('d-m-Y') }}</p>
+                        </div>
+                    </div><br>
+                    <div class="text-center">
+                        <h3 style="text-transform: uppercase;">{{ annonce.titre }}</h3>
+                        <p>{{ annonce.prix }}€</p>
+                    </div><br>
+                </a>
+                </div>
+                {% endfor %}
+
+                </div>
+
+            </div>
+            </section><!-- End Portfolio Section -->
+
+        </main><!-- End #main -->
+
+{% endblock %}

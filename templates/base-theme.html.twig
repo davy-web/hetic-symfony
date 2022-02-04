@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="{{ asset('css/glightbox.min.css') }}">
         <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}">
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
         {% block stylesheets %}<style></style>{% endblock %}
 
     </head>
@@ -25,23 +26,14 @@
 
             <nav id="navbar" class="navbar">
                 <ul>
-                <li><a class="nav-link scrollto active" href=".">Accueil</a></li>
+                <li><a class="nav-link scrollto" href=".">Accueil</a></li>
                 <li><a class="nav-link scrollto" href=".#nouveaux">Nouveaux</a></li>
-                <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+                <li><a class="nav-link scrollto" href="annonces#produits">Annonces</a></li>
+                <li class="dropdown"><a href="#"><span>Tag</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                    <li><a href="#">Drop Down 1</a></li>
-                    <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                        <ul>
-                        <li><a href="#">Deep Drop Down 1</a></li>
-                        <li><a href="#">Deep Drop Down 2</a></li>
-                        <li><a href="#">Deep Drop Down 3</a></li>
-                        <li><a href="#">Deep Drop Down 4</a></li>
-                        <li><a href="#">Deep Drop Down 5</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Drop Down 2</a></li>
-                    <li><a href="#">Drop Down 3</a></li>
-                    <li><a href="#">Drop Down 4</a></li>
+                    <li><a href="#">Vêtement</a></li>
+                    <li><a href="#">Tech</a></li>
+                    <li><a href="#">Livre</a></li>
                     </ul>
                 </li>
                 <li><a class="nav-link scrollto" href=".#contact">Contact</a></li>
@@ -88,24 +80,22 @@
                 </div>
 
                 <div class="col-lg-3 col-md-6 footer-links">
-                    <h4>Useful Links</h4>
+                    <h4>Liens utiles</h4>
                     <ul>
-                    <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                    <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-                    <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-                    <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-                    <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                    <li><i class="bx bx-chevron-right"></i> <a href=".">Acceuil</a></li>
+                    <li><i class="bx bx-chevron-right"></i> <a href=".#nouveaux">Nouveaux</a></li>
+                    <li><i class="bx bx-chevron-right"></i> <a href="annonces#produits">Annonces</a></li>
+                    <li><i class="bx bx-chevron-right"></i> <a href=".#contact">Contact</a></li>
+                    <li><i class="bx bx-chevron-right"></i> <a href="login#connexion">Compte</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-3 col-md-6 footer-links">
-                    <h4>Nos Services</h4>
+                    <h4>Tags</h4>
                     <ul>
-                    <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-                    <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-                    <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-                    <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-                    <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                    <li><i class="bx bx-chevron-right"></i> <a href="#">Vêtement</a></li>
+                    <li><i class="bx bx-chevron-right"></i> <a href="#">Tech</a></li>
+                    <li><i class="bx bx-chevron-right"></i> <a href="#">Livre</a></li>
                     </ul>
                 </div>
 
@@ -127,7 +117,7 @@
 
             <div class="container py-4">
             <div class="copyright">
-                &copy; Copyright <strong><span>Butterfly</span></strong>. All Rights Reserved
+                &copy; Copyright. All Rights Reserved
             </div>
             <div class="credits">
                 Made by Davy and Grégory
